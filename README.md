@@ -13,7 +13,8 @@ LEARNINGS
 - { cn } utility function used to merge classes
 - Next-themes is a popular NPM package used in Next.js applications to effortlessly implement theme switching (such as light/dark mode) without flickering, even with server-side rendering.
 - Object-Relational Mapping (ORM): A technique that allows developers to interact with relational databases (like SQL) using object-oriented programming (OOP) concepts (classes, objects) instead of writing raw SQL queries, simplifying data management.
-- First we have to create auth.js then run the CLI not using CLI for this project tho
+- First we have to create auth.ts then run the CLI not using CLI for this project tho
+- We can automatically create schema by running CLI it checks auth.ts and create schema accordingly
 
 STEPS
 - Installation 
@@ -37,3 +38,5 @@ STEPS
     - Setup Drizzle Config and Schema
     - Create Auth.ts and Auth Router
     - Creating Configure Part in Auth.ts
+    - Create AuthClient.ts
+    - Creating Db->Schema
