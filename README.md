@@ -40,3 +40,12 @@ STEPS
     - Creating Configure Part in Auth.ts
     - Create AuthClient.ts
     - Creating Db->Schema
+    - Creating DB Connection and Client
+- Creating onRegisterSubmit to move user once he register he's moved to login
+- Implement Login Form
+- Implementing MiddleWare
+- Fixing Header and Implementing Theme Functionality
+- Working on Form Component
+- Save data using Server Functions
+- Created Home Page
+- Work On Edit, Delete and Profile Page

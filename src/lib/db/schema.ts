@@ -17,7 +17,7 @@ export const users = pgTable("users", {
   updatedAt: timestamp("updated_at").defaultNow().notNull(),
 });
 
-export const session = pgTable("sessions", {
+export const sessions = pgTable("sessions", {
   id: varchar("id", { length: 255 }).primaryKey(),
   userId: varchar("user_id", { length: 255 })
     .references(() => users.id)
@@ -64,3 +64,34 @@ export const userRelations = relations(posts, ({ one }) => ({
     references: [users.id],
   }),
 }));
+
+// one author (user) per post
+export const postsRelations = relations(posts, ({ one }) => ({
+  author: one(users, {
+    fields: [posts.authorId],
+    references: [users.id],
+  }),
+}));
+
+// every account belongs to one user
+export const accountsRelations = relations(accounts, ({ one }) => ({
+  users: one(users, {
+    fields: [accounts.userId],
+    references: [users.id],
+  }),
+}));
+
+// every session belongs to one user
+export const sessionRelations = relations(sessions, ({ one }) => ({
+  users: one(users, {
+    fields: [sessions.userId],
+    references: [users.id],
+  }),
+}));
+
+export const schema = {
+  users,
+  accounts,
+  sessions,
+  posts,
+};
