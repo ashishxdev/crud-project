@@ -45,8 +45,6 @@ npm run dev
 
 ## 🚀 Deployment
 
-Hosted on Vercel
-
-Database powered by Supabase
-
-Secure SSL configuration for production
+- Hosted on Vercel
+- Database powered by Supabase
+- Secure SSL configuration for production
