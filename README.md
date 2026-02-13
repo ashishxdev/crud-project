@@ -41,6 +41,7 @@ Deployed on Vercel with Supabase as the production database.
 ```bash
 npm install
 npm run dev
+```
 
 ## 🚀 Deployment
 
